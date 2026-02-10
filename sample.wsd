@@ -1,0 +1,66 @@
+@startuml
+
+' ==== STATE PATTERN UNTUK NPC ====
+interface INPCState
+
+class NPCContext {
+    - INPCState currentState
+    + SetState(state: INPCState)
+    + ReceiveInput(userInput: string)
+    + MakeHappy()
+    + MakeAngry()
+    + MakeNormal()
+    + UpdateEmotionSprite()
+}
+
+class AngryState
+class HappyState
+class NormalState
+
+NPCContext --> INPCState : uses
+AngryState ..|> INPCState
+HappyState ..|> INPCState
+NormalState ..|> INPCState
+
+' ==== SCRIPT LAIN ====
+class NPCInput {
+    - NPCContext npcContext
+}
+
+NPCInput --> NPCContext
+
+' ==== CHATBOT CORE ====
+class ChatbotService {
+    - List<ChatCategory> categories
+    + string GetResponse(string userInput)
+    + void LoadDataset()
+}
+
+class Preprocessing {
+    + List<string> Tokenize(string text)
+}
+
+class TextSimilarity {
+    + double JaccardSimilarity(List<string> a, List<string> b)
+    + double LevenshteinSimilarity(string a, string b)
+}
+
+ChatbotService --> ChatCategory
+ChatbotService --> Preprocessing
+ChatbotService --> TextSimilarity
+
+' ==== DATA MODEL ====
+class ChatCategory {
+    - string tag
+    - List<string> patterns
+    - List<string> responses
+}
+
+class ChatDataset {
+    - List<ChatCategory> categories
+}
+
+ChatbotService --> ChatDataset
+ChatDataset --> ChatCategory
+
+@enduml

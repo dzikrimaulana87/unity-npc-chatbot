@@ -1,0 +1,84 @@
+# ==============================
+# Unity Generated
+# ==============================
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+sysinfo.txt
+mono_crash.*
+
+# ==============================
+# IDE / Editor
+# ==============================
+.vs/
+.vscode/
+.gradle/
+.consulo/
+ExportedObj/
+
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.DotSettings.user
+
+# ==============================
+# OS Files
+# ==============================
+.DS_Store
+Thumbs.db
+
+# ==============================
+# Logs
+# ==============================
+*.log
+
+# ==============================
+# Blender
+# ==============================
+*.blend1
+*.blend1.meta
+
+# ==============================
+# Builds / Packages
+# ==============================
+*.apk
+*.aab
+*.app
+*.unitypackage
+*.unitypackage.meta
+
+# ==============================
+# Addressables
+# ==============================
+/ServerData
+/[Aa]ssets/StreamingAssets/aa*
+/[Aa]ssets/AddressableAssetsData/link.xml*
+/[Aa]ssets/Addressables_Temp*
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
+
+# ==============================
+# Visual Scripting
+# ==============================
+/[Aa]ssets/Unity.VisualScripting.Generated/
+
+# ==============================
+# Environment / Secrets
+# ==============================
+.env
